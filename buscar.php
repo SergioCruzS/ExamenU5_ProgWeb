@@ -74,7 +74,7 @@
                             echo "<div>";
                             echo '<div class="card mb-4 flex-wrap flex-row justify-content-center"';
                             echo 'style="border-left: none; border-right: none; border-top: none;">';
-                            echo '<img src="https://www.lenovo.com/medias/mkt-hero.png?context=bWFzdGVyfHJvb3R8MjM1NTEwfGltYWdlL3BuZ3xoNzIvaDBmLzE1ODY4NzEwOTQ0Nzk4LnBuZ3xmNzRmYmVmYmI5YTljMTI0OTY2MzRlNTgzYWRiZjE0MDVmMjI2ODZmN2E0M2FjNjQ5NDRmNjQ1Y2ZmOGVlNWQz"';
+                            echo '<img src="'.$row["img"].'"';
                             echo 'class="card-img-top" style="height: 174px; width: 154px;" alt="Producto 1">';
                             echo '<div class="card-body d-flex flex-column">';
                             echo '<h5 class="card-title">' . $row["nombre"] . '</h5>';
