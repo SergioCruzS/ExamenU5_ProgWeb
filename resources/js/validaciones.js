@@ -66,3 +66,32 @@ $(document).ready(function () {
         }
     });
 });
+
+
+$(document).ready(function () {
+    
+    //Agregar cantidad de producto
+    $(".btn-add").click(function() {
+        var input = $(this).siblings('.input-cantidad');
+        var valorActual = parseInt(input.val());
+        var nuevoValor = valorActual + 1;
+    
+        // Asignar el nuevo valor al input
+        input.val(nuevoValor);
+      });
+      //Disminuir cantidad de producto
+      $(".btn-min").click(function() {
+        var input = $(this).siblings('.input-cantidad');
+        // Obtener el valor actual del input y convertirlo a número
+        var valorActual = parseInt(input.val());
+        if (valorActual > 1) {
+            var nuevoValor = valorActual - 1;
+        }else{
+            var nuevoValor = valorActual;
+        }
+    
+        // Asignar el nuevo valor al input
+        input.val(nuevoValor);
+      });
+});
+
