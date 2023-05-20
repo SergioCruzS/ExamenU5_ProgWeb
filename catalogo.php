@@ -91,7 +91,6 @@
 
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-
                             echo "<div>";
                             echo '<div class="card mb-4 flex-wrap flex-row justify-content-center"';
                             echo 'style="border-left: none; border-right: none; border-top: none;">';
@@ -103,11 +102,33 @@
                             echo '<p class="card-text">Precio: $' . $row["precio"] . '</p>';
                             echo '</div>';
                             echo '<div class="d-flex align-items-center justify-content-center me-auto">';
+                            echo '<div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2 me-2">';
+                            echo '<button class="btn px-0 py-2 btn-min">';
+                            echo '<svg width="12" height="2" viewbox="0 0 12 2" fill="none"';
+                            echo 'xmlns="http://www.w3.org/2000/svg">';
+                            echo '<g opacity="0.35">';
+                            echo '<rect x="12" width="2" height="12" transform="rotate(90 12 0)"';
+                            echo 'fill="currentColor"></rect>';
+                            echo '</g>';
+                            echo  '</svg>';
+                            echo '</button>';
+                            echo '<input class="form-control m-0 px-2 py-4 text-center text-md-end border-0 input-cantidad"';
+                            echo 'style="width: 48px;" type="number" placeholder="1" min="1" value="1"';
+                            echo ' readonly>';
+                            echo '<button class="btn px-0 py-2 btn-add">';
+                            echo '<svg width="12" height="12" viewbox="0 0 12 12" fill="none"';
+                            echo 'xmlns="http://www.w3.org/2000/svg">';
+                            echo '<g opacity="0.35">';
+                            echo '<rect x="5" width="2" height="12" fill="currentColor"></rect>';
+                            echo '<rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect>';
+                            echo "</g>";
+                            echo "</svg>";
+                            echo "</button>";
+                            echo "</div>";
                             echo '<button class="btn btn-primary " style="height: auto;">Agregar al carrito</button>';
                             echo '</div>';
                             echo '</div>';
                             echo '</div>';
-
                         }
 
                     } else {
