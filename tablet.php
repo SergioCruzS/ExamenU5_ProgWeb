@@ -86,7 +86,7 @@ while ($producto = mysqli_fetch_assoc($resultado)) {
     echo '<div class="card-body">';
     echo '<h5 class="card-title">' . $producto["nombre"] . '</h5>';
     echo '<p class="card-text">' . $producto["precio"] . '</p>';
-    echo '<a href="#" class="btn btn-primary">Ver productos</a>';
+    echo '<a href="producto_t.php" class="btn btn-primary">Ver productos</a>';
     echo '</div></div></div>';
    
 }
