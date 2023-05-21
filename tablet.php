@@ -74,7 +74,7 @@ if (mysqli_connect_errno()) {
 }
 
 // Realizar la consulta SQL para obtener los productos
-$resultado = mysqli_query($conexion, "SELECT imagen, nombre, precio FROM top_ventas WHERE categoria = 'tablet'");
+$resultado = mysqli_query($conexion, "SELECT img, nombre, precio FROM productos WHERE categoria = 'tablet' AND ventas >= 5");
 
 // Mostrar los productos en una lista usando Bootstrap 5
 echo '<div class="container">';
@@ -82,7 +82,7 @@ echo '<div class="row ">';
 while ($producto = mysqli_fetch_assoc($resultado)) {
     echo '<div class="col-md-4 ">';
     echo '<div class="card mb-4 ">';
-    echo '<img src="' . $producto["imagen"] . '" class="ampliar-imagen" alt="' . $producto["nombre"] . '">';
+    echo '<img src="' . $producto["img"] . '" class="ampliar-imagen" alt="' . $producto["nombre"] . '">';
     echo '<div class="card-body">';
     echo '<h5 class="card-title">' . $producto["nombre"] . '</h5>';
     echo '<p class="card-text">' . $producto["precio"] . '</p>';
