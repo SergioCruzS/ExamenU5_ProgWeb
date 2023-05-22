@@ -4,7 +4,7 @@ function connectDB()
     $server = "localhost";
     $user = "root";
     $password = "";
-    $database = "tabletzone";
+    $database = "swebspac_sistema";
     $conexion = mysqli_connect($server, $user, $password, $database);
 
     if (!$conexion) {

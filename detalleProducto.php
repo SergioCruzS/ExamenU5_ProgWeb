@@ -70,7 +70,7 @@
                             </div>
                             <div class="row mb-14">
                                 <div class="col-12 col-xl-8 mb-4 mb-xl-0 mt-5"><a class="btn w-100 btn-primary"
-                                        href="#">Agregar al carrito</a></div>
+                                        href="carrito.php?id=1">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
